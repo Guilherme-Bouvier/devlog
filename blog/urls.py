@@ -1,5 +1,5 @@
 from django.urls import path
-from. import views                # Oponto (.) significa diretorio atual
+from . import views                # Oponto (.) significa diretorio atual
 
 #Criamos a lidta de rotas DESTE aplicativo
 urlpatterns = [
