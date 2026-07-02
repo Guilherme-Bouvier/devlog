@@ -12,23 +12,23 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
-# Construa os caminhos dentro do projeto assim: BASE_DIR / 'subdiretório'.
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Configurações rápidas para desenvolvimento — inadequadas para produção.
-# Consulte https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# AVISO DE SEGURANÇA: mantenha a chave secreta usada em produção em sigilo!
-SECRET_KEY = 'django-insecure--)34$2lj%p22z8ngievv=e-%=0tr7!1_l7t^uxo+8&$mr0aiuo'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-vitmuoerrdf!mpf=r3lx26--9mhuh#76x(h0qqm9hgz^v_jev1'
 
-# AVISO DE SEGURANÇA: não execute com o modo de depuração ativado em produção!
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
 
-# Definição da aplicação
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -71,7 +71,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
-# Banco de dados
+# Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
@@ -82,7 +82,7 @@ DATABASES = {
 }
 
 
-# Validação de senha
+# Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -101,19 +101,19 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internacionalização
+# Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/sao_paulo'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
 USE_TZ = True
 
 
-# Arquivos estáticos (CSS, JavaScript, Imagens)
+# Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'

@@ -1,17 +1,16 @@
-#Importamos a ferramenta para devolver texto simples
-from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Artigo
 
-#Criamos a nossa função para a página inicial
 def home(request):
 
-    #Devcolvemos a resposta (o prato pronto)
-    return render(request, 'blog/index.html')
+    noticias = Artigo.objects.all()
+    
+    contexto = {
+        'lista_artigos': noticias
+    }
+    
+    return render(request, "blog/index.html", contexto)
+
 
 def sobre_nos(request):
-
-    #O 'request' é o pedido (comando) do usuário.
-    mensagem = "<h1>Sobre o DevBlog!</h1>"
-
-    #Devcolvemos a resposta (o prato pronto)
-    return render(request, 'blog/sobre.html')
+    return render(request, "blog/sobre.html")

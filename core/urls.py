@@ -19,7 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # Pegue o tráfego da raiz('') e jogue para o blog.urls
-    path('', include('blog.urls')),
+    path('', include('blog.urls'))
 ]

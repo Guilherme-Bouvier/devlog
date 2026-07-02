@@ -1,5 +1,93 @@
 body {
-    background-color: #f0f8ff;
+   background-color: #f0f8ff;
+   /* Define a cor de fundo da página (azul bem claro) */
 
-    font-family: Arial, sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
+   /* Define a fonte padrão do site */
+}
+
+/* ============================= */
+/* CAIXA DAS UNIDADES CURRICULARES */
+/* ============================= */
+
+.caixa-uc {
+    border: 1px solid rgba(13, 110, 253, 0.4);
+    /* Borda azul suave */
+
+    background: rgba(255, 255, 255, 0.7);
+    /* Fundo branco semi-transparente */
+
+    border-radius: 12px;
+    /* Cantos arredondados */
+
+    padding: 12px;
+    /* Espaçamento interno reduzido para compactar altura */
+
+    margin-bottom: 12px;
+    /* Espaço entre as caixas */
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* Sombra leve para profundidade */
+
+    transition: all 0.3s ease;
+    /* Suaviza animações (hover) */
+}
+
+/* TÍTULO DA UC */
+.caixa-uc h5 {
+    font-size: 14px;
+    /* Reduz tamanho do título */
+
+    margin-bottom: 6px;
+    /* Espaço entre título e texto */
+
+    font-weight: 600;
+    /* Deixa o texto seminegrito */
+}
+
+/* TEXTO DA UC */
+.caixa-uc p {
+    font-size: 12.5px;
+    /* Texto menor para compactar */
+
+    margin: 0;
+    /* Remove margens padrão */
+
+    line-height: 1.4;
+    /* Espaçamento entre linhas */
+}
+
+/* EFEITO HOVER DAS CAIXAS */
+.caixa-uc:hover {
+    transform: translateY(-3px);
+    /* Move levemente para cima */
+
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    /* Sombra mais forte no hover */
+
+    border-color: #0d6efd;
+    /* Destaca a borda em azul */
+}
+
+
+/* IMAGEM */
+
+
+.img-full {
+    width: 50vw;
+    /* Faz a imagem ocupar toda a largura da tela */
+
+    margin: 5;
+    /* Remove margens externas */
+
+    padding: 0;
+    /* Remove espaçamento interno */
+}
+
+.img-full img {
+    width: 150%;
+    /* Faz a imagem esticar de lado a lado */
+
+    display: block;
+    /* Remove espaços em branco abaixo da imagem */
 }

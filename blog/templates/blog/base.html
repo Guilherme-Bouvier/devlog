@@ -3,52 +3,43 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBlog</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!--   BOOTSTRAP 5 VIA CDN (FICA EM CIMA DO NOSSO CSS) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- O NOSSO CSS LOCAL (PARA PODERMOS SOBREECREVER AS REGRAS )    -->
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" >
 </head>
-<body class="bg-light">
-<!--cabeçalho-->
+<body class="bg-light d-flex flex-column min-vh-100">
+    
     <header>
-        <nav class="navbar navbr-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}"> 🚀 DevBlog </a>
-                <div class="collapse navbar-collapse" >
+                <a class="navbar-brand" href="{% url 'home' %}">🚀 DevBlog</a>
+                <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}"> Inicio</a>
+                            <a class="nav-link" href="{% url 'home' %}">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'sobre' %}"> Sobre</a>
+                            <a class="nav-link" href="{% url 'sobre_nos' %}">Sobre</a>
                         </li>
                     </ul>
                 </div>
             </div>
-    
         </nav>
-
-
     </header>
-<!--o buraco dinamico-->
-    <main class="container my-5">
-           <!--Area principal--> 
-        {% block content %}
-<!--- Aqui vai o conteudo das outas paginas -->
-        {% endblock %}
 
+    <main class="container my-5 flex-grow-1">
+        {% block content %}
+        <!-- AQUI VAI O CONTEUDO DAS OUTRAS PAGINAS -->
+        {% endblock %}
     </main>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-       
-        <p class="mb-0">© 2026 Desenvolvido pela turma Python</p>
-        
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">© 2026 Desenvolvido pela Turma da Trilha de Python</p>
     </footer>
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
