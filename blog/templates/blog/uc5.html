@@ -1,0 +1,98 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- CABEÇALHO DA UC -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">UC5 - Planejar e Desenvolver Websites Utilizando o Framework Django</h1>
+        <p class="text-muted">
+            Desenvolvimento completo de aplicações web com arquitetura MVT
+        </p>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="row">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="col-lg-8">
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>📌 Objetivo da UC</h4>
+                <p>
+                    Planejar e desenvolver aplicações web completas utilizando o framework Django,
+                    aplicando arquitetura MVT, manipulação de banco de dados, autenticação de usuários,
+                    criação de rotas, templates e boas práticas de desenvolvimento web.
+                </p>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>🧠 Conteúdos estudados</h4>
+                <ul>
+                    <li>Arquitetura MVT (Model - View - Template)</li>
+                    <li>Criação de projetos Django</li>
+                    <li>Models e banco de dados relacional</li>
+                    <li>Admin Django</li>
+                    <li>Sistema de rotas (URLs)</li>
+                    <li>Views e templates</li>
+                    <li>Autenticação e controle de usuários</li>
+                    <li>CRUD completo (Create, Read, Update, Delete)</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>💡 O que aprendi</h4>
+                <p>
+                    Nesta unidade, desenvolvi a capacidade de construir aplicações web completas,
+                    estruturadas e escaláveis utilizando Django. Este conhecimento foi aplicado diretamente
+                    no desenvolvimento do DEV BLOG, onde implementei funcionalidades como listagem de artigos,
+                    categorias, detalhes de postagens e organização do sistema em arquitetura MVT.
+                </p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm">
+                <h4>🚀 Projeto aplicado</h4>
+                <p>
+                    O DEV BLOG foi desenvolvido como projeto final da UC5, integrando todos os conhecimentos
+                    adquiridos ao longo do curso, desde lógica de programação até desenvolvimento web completo.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="col-lg-4">
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>📊 Nível da UC</h5>
+                <p>Avançado</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>🛠️ Tecnologias</h5>
+                <p>Django, Python, HTML, CSS, Bootstrap</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm">
+                <h5>📁 Status</h5>
+                <p class="text-success fw-bold">Cursando</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTÃO VOLTAR -->
+    <div class="text-center mt-5">
+
+        <a href="{% url 'sobre_nos' %}" class="btn btn-primary px-4 py-2">
+            ← Voltar para Sobre
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -18,13 +18,11 @@
         {# Coluna maior para o texto (7/12 no desktop), com espaçamento lateral #}
 
             <!-- Título -->
-            <h1 class="display-4 fw-bold text-dark mb-4">
-            {# Título principal grande, negrito e com margem inferior #}
-
-                <span class="text-primary fs-3"></span> Sobre o Projeto <span class="text-primary fs-3"></span>
-                {# Simulação de tags HTML no título para efeito visual #}
-
-            </h1>
+            <div class="text-center mb-4">
+                <h1 class="display-4 fw-bold text-dark">
+                    Sobre o Projeto
+                </h1>
+            </div>
 
             <!-- Conteúdo principal do SOBRE -->
             <div>
@@ -51,53 +49,63 @@
         <div class="col-lg-4">
         {# Coluna lateral menor (4/12) com as UCs em forma de cards #}
 
+            {# Título da seção das UCs #}
             <h6 class="text-muted mb-4 fw-bold text-uppercase text-center"
                 style="letter-spacing: 2px;">
-                Trilha do Conhecimento
+                <strong>Trilha do Conhecimento</strong>
             </h6>
-            {# Título da seção das UCs #}
-
-            <div class="caixa-uc">
-                <h5>UC1 - Lógica de Programação</h5>
-                <p>Estudo da lógica de programação com foco no raciocínio lógico e resolução de problemas por meio de algoritmos, abordando variáveis, operadores, decisões, repetições e boas práticas.</p>
-            </div>
+            
             {# Card UC1 #}
+            <a href="{% url 'uc1' %}" class="text-decoration-none">
+                <div class="caixa-uc">
+                    <h5>UC1 - Lógica de Programação</h5>
+                    <p>Estudo da lógica de programação com foco no raciocínio lógico e resolução de problemas por meio de algoritmos, abordando variáveis, operadores, decisões, repetições e boas práticas.</p>
+                </div>
+            </a>
 
-            <div class="caixa-uc">
-                <h5>UC2 - Desenvolver Algoritmos em Python</h5>
-                <p>Desenvolvimento de algoritmos em Python, explorando sintaxe, tipos de dados, funções, estruturas de controle e coleções, com foco em soluções eficientes, organizadas e reutilizáveis.</p>
-            </div>
             {# Card UC2 #}
+            <a href="{% url 'uc2' %}" class="text-decoration-none">
+                <div class="caixa-uc">
+                    <h5>UC2 - Desenvolver Algoritmos em Python</h5>
+                    <p>Desenvolvimento de algoritmos em Python, explorando sintaxe, tipos de dados, funções, estruturas de controle e coleções, com foco em soluções eficientes, organizadas e reutilizáveis.</p>
+                </div>
+            </a>
 
-            <div class="caixa-uc">
-                <h5>UC3 - Desenvolver Aplicações Desktop em Python</h5>
-                <p>Criação de aplicações desktop em Python com interfaces gráficas, eventos e integração com dados, priorizando usabilidade, organização do código e experiência do usuário final.</p>
-            </div>
             {# Card UC3 #}
+            <a href="{% url 'uc3' %}" class="text-decoration-none">
+                <div class="caixa-uc">
+                    <h5>UC3 - Desenvolver Aplicações Desktop em Python</h5>
+                    <p>Criação de aplicações desktop em Python com interfaces gráficas, eventos e integração com dados, priorizando usabilidade, organização do código e experiência do usuário final.</p>
+                </div>
+            </a>
 
-            <div class="caixa-uc">
-                <h5>UC4 - Desenvolver Aplicações Web Responsivas com Python</h5>
-                <p>Desenvolvimento de aplicações web responsivas com Python, integrando front-end e back-end, consumo de APIs, autenticação de usuários e boas práticas para diferentes dispositivos.</p>
-            </div>
             {# Card UC4 #}
+            <a href="{% url 'uc4' %}" class="text-decoration-none">
+                <div class="caixa-uc">
+                    <h5>UC4 - Desenvolver Aplicações Web Responsivas com Python</h5>
+                    <p>Desenvolvimento de aplicações web responsivas com Python, integrando front-end e back-end, consumo de APIs, autenticação de usuários e boas práticas para diferentes dispositivos.</p>
+                </div>
+            </a>
 
-            <div class="caixa-uc mb-5">
-                <h5>UC5 - Planejar e Desenvolver Websites Utilizando o Framework Django</h5>
-                <p>Planejamento e desenvolvimento de websites com Django, usando arquitetura MVT, banco de dados, rotas, templates, formulários, autenticação e boas práticas de segurança e escalabilidade.</p>
-            </div>
             {# Card UC5 #}
+            <a href="{% url 'uc5' %}" class="text-decoration-none">
+                <div class="caixa-uc mb-5">
+                    <h5>UC5 - Planejar e Desenvolver Websites Utilizando o Framework Django</h5>
+                    <p>Planejamento e desenvolvimento de websites com Django, usando arquitetura MVT, banco de dados, rotas, templates, formulários, autenticação e boas práticas de segurança e escalabilidade.</p>
+                </div>
+            </a>
 
+        
         </div>
 
     </div>
 
     <!-- IMAGEM FINAL DA PÁGINA -->
     <div class="img-full">
-    {# Seção final centralizada para imagem do projeto #}
 
+   
         <img src="{% static 'blog/images/logo.png' %}"
-             class="img-fluid rounded shadow" style="margin-top: 50px;">
-        {# Imagem responsiva, com bordas arredondadas e sombra #}
+             class="img-fluid rounded shadow" alt="Logo do Projeto DEV BLOG">
 
     </div>
 

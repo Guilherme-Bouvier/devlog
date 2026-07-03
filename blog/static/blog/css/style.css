@@ -1,13 +1,13 @@
 body {
-   background-color: #f0f8ff;
-   /* Define a cor de fundo da página (azul bem claro) */
+    background-color: #f0f8ff;
+    /* Define a cor de fundo da página (azul bem claro) */
 
-   font-family: Arial, Helvetica, sans-serif;
-   /* Define a fonte padrão do site */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte padrão do site */
 }
 
 /* ============================= */
-/* CAIXA DAS UNIDADES CURRICULARES */
+/* CAIXAS DAS UNIDADES CURRICULARES */
 /* ============================= */
 
 .caixa-uc {
@@ -15,40 +15,46 @@ body {
     /* Borda azul suave */
 
     background: rgba(255, 255, 255, 0.7);
-    /* Fundo branco semi-transparente */
+    /* Fundo branco semitransparente */
 
     border-radius: 12px;
     /* Cantos arredondados */
 
     padding: 12px;
-    /* Espaçamento interno reduzido para compactar altura */
+    /* Espaçamento interno */
 
     margin-bottom: 12px;
-    /* Espaço entre as caixas */
+    /* Espaço entre uma caixa e outra */
 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    /* Sombra leve para profundidade */
+    /* Sombra suave */
 
     transition: all 0.3s ease;
-    /* Suaviza animações (hover) */
+    /* Suaviza o efeito de hover */
 }
 
-/* TÍTULO DA UC */
+/* ============================= */
+/* TÍTULO DAS UCs */
+/* ============================= */
+
 .caixa-uc h5 {
-    font-size: 14px;
-    /* Reduz tamanho do título */
+    font-size: 15px;
+    /* Tamanho do título */
 
     margin-bottom: 6px;
-    /* Espaço entre título e texto */
+    /* Espaço entre o título e o texto */
 
     font-weight: 600;
-    /* Deixa o texto seminegrito */
+    /* Seminegrito */
 }
 
-/* TEXTO DA UC */
+/* ============================= */
+/* TEXTO DAS UCs */
+/* ============================= */
+
 .caixa-uc p {
     font-size: 12.5px;
-    /* Texto menor para compactar */
+    /* Tamanho do texto */
 
     margin: 0;
     /* Remove margens padrão */
@@ -57,37 +63,49 @@ body {
     /* Espaçamento entre linhas */
 }
 
-/* EFEITO HOVER DAS CAIXAS */
+/* ============================= */
+/* EFEITO AO PASSAR O MOUSE */
+/* ============================= */
+
 .caixa-uc:hover {
     transform: translateY(-3px);
-    /* Move levemente para cima */
+    /* Move levemente a caixa para cima */
 
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-    /* Sombra mais forte no hover */
+    /* Intensifica a sombra */
 
     border-color: #0d6efd;
     /* Destaca a borda em azul */
 }
 
-
-/* IMAGEM */
-
+/* ============================= */
+/* IMAGEM FINAL DA PÁGINA */
+/* ============================= */
 
 .img-full {
-    width: 50vw;
-    /* Faz a imagem ocupar toda a largura da tela */
+    width: 100%;
+    /* Ocupa toda a largura disponível do container */
 
-    margin: 5;
-    /* Remove margens externas */
+    margin-top: 70px;
+    /* Espaço entre o conteúdo e a imagem */
 
-    padding: 0;
-    /* Remove espaçamento interno */
+    text-align: center;
+    /* Centraliza a imagem horizontalmente */
 }
 
 .img-full img {
-    width: 150%;
-    /* Faz a imagem esticar de lado a lado */
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do container */
+
+    max-width: 1110px;
+    /* Limita a largura máxima para acompanhar o conteúdo */
+
+    height: auto;
+    /* Mantém a proporção da imagem */
 
     display: block;
-    /* Remove espaços em branco abaixo da imagem */
+    /* Remove espaços extras abaixo da imagem */
+
+    margin: 0 auto;
+    /* Centraliza a imagem */
 }

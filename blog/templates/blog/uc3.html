@@ -1,0 +1,85 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- CABEÇALHO DA UC -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">UC3 - Desenvolver Aplicações Desktop em Python</h1>
+        <p class="text-muted">
+            Criação de interfaces gráficas e aplicações desktop funcionais com Python
+        </p>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="row">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="col-lg-8">
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>📌 Objetivo da UC</h4>
+                <p>
+                    Desenvolver aplicações desktop utilizando Python, com foco na criação de interfaces gráficas,
+                    manipulação de eventos e integração com dados, visando melhorar a experiência do usuário.
+                </p>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>🧠 Conteúdos estudados</h4>
+                <ul>
+                    <li>Introdução a interfaces gráficas</li>
+                    <li>Biblioteca Tkinter (ou equivalente)</li>
+                    <li>Eventos e interações do usuário</li>
+                    <li>Botões, inputs e janelas</li>
+                    <li>Organização de layouts</li>
+                    <li>Conexão com dados locais</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>💡 O que aprendi</h4>
+                <p>
+                    Nesta unidade, aprendi a transformar código Python em aplicações visuais interativas,
+                    entendendo como estruturar interfaces e melhorar a usabilidade de sistemas desktop.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="col-lg-4">
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>📊 Nível da UC</h5>
+                <p>Intermediário</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>🛠️ Tecnologias</h5>
+                <p>Python (Tkinter / GUI)</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm">
+                <h5>📁 Status</h5>
+                <p class="text-success fw-bold">Concluído</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTÃO VOLTAR -->
+    <div class="text-center mt-5">
+
+        <a href="{% url 'sobre_nos' %}" class="btn btn-primary px-4 py-2">
+            ← Voltar para Sobre
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- CABEÇALHO DA UC -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">UC2 - Desenvolver Algoritmos em Python</h1>
+        <p class="text-muted">
+            Introdução à linguagem Python e construção de algoritmos estruturados
+        </p>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="row">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="col-lg-8">
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>📌 Objetivo da UC</h4>
+                <p>
+                    Capacitar o aluno a desenvolver algoritmos utilizando a linguagem Python,
+                    aplicando lógica de programação na resolução de problemas computacionais
+                    de forma estruturada e eficiente.
+                </p>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>🧠 Conteúdos estudados</h4>
+                <ul>
+                    <li>Sintaxe básica do Python</li>
+                    <li>Tipos de dados (int, float, string, bool)</li>
+                    <li>Entrada e saída de dados (input / print)</li>
+                    <li>Estruturas condicionais (if, elif, else)</li>
+                    <li>Estruturas de repetição (for, while)</li>
+                    <li>Listas, tuplas e dicionários</li>
+                    <li>Funções em Python</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>💡 O que aprendi</h4>
+                <p>
+                    Nesta unidade, aprendi a transformar lógica de programação em código Python,
+                    desenvolvendo soluções mais organizadas, reutilizáveis e próximas de aplicações reais.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="col-lg-4">
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>📊 Nível da UC</h5>
+                <p>Intermediário</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>🛠️ Tecnologias</h5>
+                <p>Python</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm">
+                <h5>📁 Status</h5>
+                <p class="text-success fw-bold">Concluído</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTÃO VOLTAR -->
+    <div class="text-center mt-5">
+
+        <a href="{% url 'sobre_nos' %}" class="btn btn-primary px-4 py-2">
+            ← Voltar para Sobre
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

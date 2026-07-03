@@ -1,0 +1,86 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <!-- CABEÇALHO DA UC -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">UC1 - Lógica de Programação</h1>
+        <p class="text-muted">
+            Fundamentos da lógica computacional e resolução de problemas
+        </p>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="row">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="col-lg-8">
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>📌 Objetivo da UC</h4>
+                <p>
+                    Desenvolver o raciocínio lógico aplicado à programação,
+                    compreendendo estruturas básicas como variáveis, operadores,
+                    decisões e repetições para resolução de problemas computacionais.
+                </p>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>🧠 Conteúdos estudados</h4>
+                <ul>
+                    <li>Algoritmos e fluxogramas</li>
+                    <li>Variáveis e tipos de dados</li>
+                    <li>Estruturas condicionais (if/else)</li>
+                    <li>Estruturas de repetição (for / while)</li>
+                    <li>Operadores lógicos e aritméticos</li>
+                </ul>
+            </div>
+
+            <div class="p-4 bg-white rounded shadow-sm mb-4">
+                <h4>💡 O que aprendi</h4>
+                <p>
+                    Nesta unidade, desenvolvi a base do pensamento computacional,
+                    aprendendo a estruturar soluções de forma lógica e organizada,
+                    fundamental para todas as outras unidades do curso.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="col-lg-4">
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>📊 Nível da UC</h5>
+                <p>Fundamental</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm mb-4">
+                <h5>🛠️ Tecnologias</h5>
+                <p>Python (base lógica)</p>
+            </div>
+
+            <div class="p-4 bg-light rounded shadow-sm">
+                <h5>📁 Status</h5>
+                <p class="text-success fw-bold">Concluído</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BOTÃO VOLTAR -->
+    <div class="text-center mt-5">
+
+        <a href="{% url 'sobre_nos' %}" class="btn btn-primary px-4 py-2">
+            ← Voltar para Sobre
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
