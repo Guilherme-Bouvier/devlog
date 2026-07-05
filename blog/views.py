@@ -4,20 +4,42 @@ from .models import Artigo, Categoria
 def home(request):
 
     categoria_selecionada = request.GET.get('categoria')
-
     categorias = Categoria.objects.all()
-    
+
+    # ==========================================
+    # FILTRO (SE JÁ EXISTE, MANTIDO)
+    # ==========================================
     if categoria_selecionada:
         noticias = Artigo.objects.filter(categoria__nome__icontains=categoria_selecionada)
     else:
         noticias = Artigo.objects.all()
 
+    # ordenação (IMPORTANTE para consistência)
+    noticias = noticias.order_by('-data_publicacao')
+
+    # ==========================================
+    # ⭐ NOVOS DADOS PARA A HOME (SEM REMOVER NADA)
+    # ==========================================
+    artigos_destaque = noticias[:4]   # cards superiores
+    banner_artigos = noticias[:5]     # banner principal
+
     contexto = {
+        # original (não mexido)
         'lista_artigos': noticias,
+
+        # categorias (original)
         'lista_categorias': categorias,
-        'categoria_selecionada': categoria_selecionada
+
+        # filtro atual (original)
+        'categoria_selecionada': categoria_selecionada,
+
+        # ⭐ NOVO (adicionado)
+        'artigos_destaque': artigos_destaque,
+
+        # 📰 NOVO (adicionado)
+        'banner_artigos': banner_artigos,
     }
-    
+
     return render(request, "blog/index.html", contexto)
 
 

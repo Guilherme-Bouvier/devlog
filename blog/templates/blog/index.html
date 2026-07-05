@@ -2,34 +2,194 @@
 
 {% block content %}
 
-    {% if categoria_selecionada %}
-        <h2>Notícias sobre {{ categoria_selecionada }}</h2>
-    {% else %}
-        <h2>Últimas Notícias</h2>
-    {% endif %}
+ 
+{# ========================================================= #}
+{# 🏠 CABEÇALHO DA HOME                                      #}
+{# ========================================================= #}
 
-    {% for artigo in lista_artigos %}
+<div class="row align-items-center mb-4">
+    <div class="col-md-8">
+        {% if categoria_selecionada %}
+            <h2 class="fw-bold">
+                📚 {{ categoria_selecionada }}
+            </h2>
 
-        <div class="card mb-3 shadow-sm">
-            <div class="card-body">
-                <h3 class="card-title text-success">{{ artigo.titulo }}</h3>
-                <h6 class="card-subtitle mb-2 text-muted">Categoria: {{ artigo.categoria.nome}} | Autor: {{ artigo.autor}}</h6>
-                <p class="card-text">
-                    {{ artigo.conteudo|truncatechars:100}}
-                    <a href="{% url 'detalhe_artigo' artigo.id %}" class="btn btn-success btn-sm">
-                        Ler mais
-                    </a>
+            <p class="text-muted mb-0">
+                Confira as últimas publicações desta categoria.
+            </p>
+
+            {% else %}
+           
+            <h1 class="fw-bold">
+                Últimas Notícias
+            </h1>
+
+            <p class="fs-6 text-muted mb-4">
+                Fique por dentro das principais novidades do mundo da tecnologia.
+            </p>
+        {% endif %}
+    </div>
+
+    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <span class="badge bg-success fs-6">
+            {{ lista_artigos|length }} artigos publicados
+        </span>
+    </div>
+</div>
+<!-- 
+
+
+{# ========================================================= #}
+{# ⭐ DESTAQUES (4 CARDS)                                    #}
+{# ========================================================= #}
+
+<div class="row g-4 mb-5">
+    {% for artigo in artigos_destaque %}
+    <div class="col-lg-3 col-md-6">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body d-flex flex-column">
+                <div class="text-center mb-3">
+                    <i class="bi bi-star-fill text-success" style="font-size:40px;"></i>
+                </div>
+                <div class="text-center mb-2">
+                    <span class="badge bg-success">
+                        {{ artigo.categoria.nome }}
+                    </span>
+                </div>
+                <h5 class="text-center">
+                    {{ artigo.titulo }}
+                </h5>
+                <p class="text-muted flex-grow-1">
+                    {{ artigo.conteudo|truncatechars:90 }}
                 </p>
-                
-                <p class="card-text">
-                    <small class="text-muted"> Publicado em: {{ artigo.data_publicacao }}</small>
-                </p>
+                <small class="text-muted">
+                    {{ artigo.autor }}
+                </small>
+
+                <a href="{% url 'detalhe_artigo' artigo.id %}"  class="btn btn-success w-100 mt-2">
+                    Ler artigo
+                </a>
             </div>
+        </div>
+    </div>
+    {% endfor %}
 
+</div>
+
+-->
+
+
+{# ========================================================= #}
+{# 📰 BANNER CARROSSEL (5 EM 5 SEGUNDOS)                     #}
+{# ========================================================= #}
+
+<div id="bannerPrincipal"
+     class="carousel slide mb-5"
+     data-bs-ride="carousel"
+     data-bs-interval="5000">
+
+    {# INDICADORES #}
+    <div class="carousel-indicators">
+
+        {% for artigo in banner_artigos %}
+        <button type="button"
+                data-bs-target="#bannerPrincipal"
+                data-bs-slide-to="{{ forloop.counter0 }}"
+                class="{% if forloop.first %}active{% endif %}">
+        </button>
+        {% endfor %}
+
+    </div>
+
+    {# SLIDES #}
+    <div class="carousel-inner">
+
+        {% for artigo in banner_artigos %}
+
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <div class="p-5 bg-white rounded shadow-sm">
+                <span class="badge bg-success mb-2">
+                    {{ artigo.categoria.nome }}
+                </span>
+                <h3>
+                    {{ artigo.titulo }}
+                </h3>
+                <p class="text-muted">
+                    {{ artigo.conteudo|truncatechars:200 }}
+                </p>
+                <a href="{% url 'detalhe_artigo' artigo.id %}"
+                   class="btn btn-success">
+                    Ler notícia
+                </a>
+            </div>
         </div>
 
-    {% empty %}
-        <p>Nenhuma notícia publicada ainda.</p>
-    {% endfor %}
+        {% endfor %}
+
+    </div>
+
+    {# CONTROLES #}
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#bannerPrincipal"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#bannerPrincipal"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+
+{# ========================================================= #}
+{# 📰 LISTA FINAL DE ARTIGOS                                #}
+{# ========================================================= #}
+
+<section class="mb-5">
+
+    <div class="d-flex justify-content-between mb-4">
+        <h3 class="fw-bold">📰 Todos os Artigos</h3>
+        <span class="badge bg-dark">
+            {{ lista_artigos|length }}
+        </span>
+    </div>
+    <div class="row">
+
+        {% for artigo in lista_artigos %}
+
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <span class="badge bg-success">
+                        {{ artigo.categoria.nome }}
+                    </span>
+                    <h4>
+                        {{ artigo.titulo }}
+                    </h4>
+                    <p class="text-muted">
+                        {{ artigo.conteudo|truncatechars:150 }}
+                    </p>
+                    <small>
+                        {{ artigo.autor }} | {{ artigo.data_publicacao }}
+                    </small>
+                    <hr>
+                    <a href="{% url 'detalhe_artigo' artigo.id %}" class="btn btn-success w-100">
+                        Ler artigo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {% empty %}
+        <p>Nenhuma notícia encontrada.</p>
+        {% endfor %}
+
+    </div>
+</section>
 
 {% endblock %}

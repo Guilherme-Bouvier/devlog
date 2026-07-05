@@ -1,59 +1,134 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevBlog</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" >
+    <title>{% block title %}DevBlog{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS do Projeto -->
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+
+    {% block extra_css %}
+    {% endblock %}
 </head>
+
 <body class="bg-light d-flex flex-column min-vh-100">
-    
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}">🚀 DevBlog</a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'sobre_nos' %}">Sobre</a>
-                        </li>
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Categorias
+<!-- ===================================================== -->
+<!-- NAVBAR -->
+<!-- ===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{% url 'home' %}">
+            🚀 DevBlog
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">
+                        <i class="bi bi-house-door-fill"></i>
+                        Início
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sobre_nos' %}">
+                        <i class="bi bi-info-circle-fill"></i>
+                        Sobre
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       role="button"
+                       data-bs-toggle="dropdown">
+                        <i class="bi bi-grid-fill"></i>
+                        Categorias
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        {% for categoria in lista_categorias %}
+                        <li>
+                            <a class="dropdown-item"
+                               href="{% url 'home' %}?categoria={{ categoria.nome }}">
+                                {{ categoria.nome }}
                             </a>
-                            <ul class="dropdown-menu">
-                                {% for categoria in lista_categorias %}
-                                    <li>
-                                        <a class="dropdown-item" href="{% url 'home' %}?categoria={{ categoria.nome }}">{{ categoria.nome }}</a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
                         </li>
-                        
+                        {% empty %}
+                        <li>
+                            <span class="dropdown-item text-muted">
+                                Nenhuma categoria cadastrada.
+                            </span>
+                        </li>
+                        {% endfor %}
                     </ul>
-                </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===================================================== -->
+<!-- CONTEÚDO -->
+<!-- ===================================================== -->
+
+<main class="container my-5 flex-grow-1">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+<footer class="bg-dark text-white mt-auto py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h5 class="fw-bold">
+                    🚀 DevBlog
+                </h5>
+                <p class="mb-0 text-white-50">
+                    Compartilhando conhecimento sobre Python, Django,
+                    Desenvolvimento Web e Tecnologia.
+                </p>
             </div>
-        </nav>
-    </header>
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                <small class="text-white-50">
+                    © 2026 DevBlog
+                    <br>
+                    Desenvolvido com Django + Bootstrap 5
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <main class="container my-5 flex-grow-1">
-        {% block content %}
-        <!-- AQUI VAI O CONTEUDO DAS OUTRAS PAGINAS -->
-        {% endblock %}
-    </main>
-
-    <footer class="bg-dark text-white text-center py-4">
-        <p class="mb-0">© 2026 Desenvolvido pela Turma da Trilha de Python</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
+{% block scripts %}
+{% endblock %}
 </body>
 </html>
