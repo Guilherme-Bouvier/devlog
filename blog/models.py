@@ -10,6 +10,9 @@ class Categoria(models.Model):
 class Artigo(models.Model):
     titulo = models.CharField(max_length=200)
     conteudo = models.TextField()
+
+    imagem = models.ImageField(upload_to='artigos/', null=True, blank=True)
+    
     data_publicacao = models.DateTimeField(auto_now_add=True)
 
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)

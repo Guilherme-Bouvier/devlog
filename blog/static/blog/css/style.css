@@ -6,9 +6,7 @@ body {
     /* Define a fonte padrão do site */
 }
 
-/* ============================= */
 /* CAIXAS DAS UNIDADES CURRICULARES */
-/* ============================= */
 
 .caixa-uc {
     border: 1px solid rgba(13, 110, 253, 0.4);
@@ -185,4 +183,19 @@ body {
     margin: 0;
     font-size: 13px;
     line-height: 1.4;
+}
+
+#bannerPrincipal {
+    height: 60vh;
+}
+
+#bannerPrincipal .carousel-inner,
+#bannerPrincipal .carousel-item {
+    height: 100%;
+}
+
+#bannerPrincipal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
