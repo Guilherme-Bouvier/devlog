@@ -10,4 +10,8 @@ urlpatterns = [
     path("uc3/", views.uc3, name="uc3"),
     path("uc4/", views.uc4, name="uc4"),
     path("uc5/", views.uc5, name="uc5"),
+
+    path("contato/", views.fale_conosco, name="fale_conosco"),
+
+
 ]

@@ -83,26 +83,28 @@
                                 Nenhuma categoria cadastrada.
                             </span>
                         </li>
+
                         {% endfor %}
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'fale_conosco' %}"> Contato </a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- ===================================================== -->
 <!-- CONTEÚDO -->
-<!-- ===================================================== -->
+
 
 <main class="container my-5 flex-grow-1">
     {% block content %}
     {% endblock %}
 </main>
 
-<!-- ===================================================== -->
 <!-- FOOTER -->
-<!-- ===================================================== -->
+
 <footer class="bg-dark text-white mt-auto py-4">
     <div class="container">
         <div class="row align-items-center">
