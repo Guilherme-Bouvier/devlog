@@ -1,15 +1,55 @@
- {% extends  'blog/base.html' %}
+{% extends 'blog/base.html' %}
 
- {% block content %}
-    <h2> Fale Conosco </h2>
-    <p> Envie-nos uma mensagem, crítica ou sugestão.</p>
+{% block content %}
 
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p}}
+<div class="container py-5">
 
-        <button type="sebmit" class="btn btn_primary mt-3"> Enviar mensagem</button>
-    </form>
+    <div class="row justify-content-center">
 
- {% endblock  %}
- 
+        <div class="col-md-8">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body p-4">
+
+                    <h2 class="text-center mb-3">
+                         Fale Conosco
+                    </h2>
+
+                    <p class="text-center text-muted mb-4">
+                        Envie uma mensagem, crítica ou sugestão.
+                        Teremos prazer em responder.
+                    </p>
+
+
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            {{ form.nome.label }}
+                            {{ form.nome }}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.email.label }}
+                            {{ form.email }}
+                        </div>
+
+                        <div class="mb-3">
+                            {{ form.mensagem.label }}
+                            {{ form.mensagem }}
+                        </div>
+
+                        <div class="text-center">
+                            <button 
+                                type="submit"
+                                class="btn btn-primary btn-lg px-5">
+                                Enviar mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

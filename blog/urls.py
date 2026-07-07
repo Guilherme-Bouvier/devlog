@@ -12,6 +12,8 @@ urlpatterns = [
     path("uc5/", views.uc5, name="uc5"),
 
     path("contato/", views.fale_conosco, name="fale_conosco"),
+    path("api/artigos/", views.api_listar_artigos, name="api_artigos"),
+    path("api/categorias/", views.api_listar_categorias, name="api_categoria"),
 
 
 ]
