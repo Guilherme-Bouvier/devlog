@@ -4,7 +4,7 @@ from .models import Artigo, Categoria
 class ArtigoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Artigo
-        fields = ['id', 'titulo', 'conteudo', 'data_publicacao']
+        fields = ['id', 'autor', 'titulo', 'categoria', 'conteudo', 'data_publicacao']
 
 class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:

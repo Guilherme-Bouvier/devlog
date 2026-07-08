@@ -9,20 +9,20 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
-
+from datetime import timedelta
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+# Construa os caminhos dentro do projeto desta forma: BASE_DIR / 'subdiretório'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
+# Configurações de desenvolvimento de início rápido — inadequadas para produção
+# Consulte https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# AVISO DE SEGURANÇA: mantenha a chave secreta usada em produção em segredo!
 SECRET_KEY = 'django-insecure-vitmuoerrdf!mpf=r3lx26--9mhuh#76x(h0qqm9hgz^v_jev1'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# AVISO DE SEGURANÇA: não execute com o modo de depuração (debug) ativado em produção!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -125,3 +125,13 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+}
