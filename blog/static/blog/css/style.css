@@ -1,201 +1,345 @@
-body {
-    background-color: #f0f8ff;
-    /* Define a cor de fundo da página (azul bem claro) */
+/* ========================================= */
+/* CONFIGURAÇÕES GERAIS DA PÁGINA */
+/* ========================================= */
 
+body {
+    /* Define a cor de fundo de toda a página */
+    background-color: #f0f8ff;
+
+    /* Define a fonte padrão utilizada em todo o site */
     font-family: Arial, Helvetica, sans-serif;
-    /* Define a fonte padrão do site */
 }
 
-/* CAIXAS DAS UNIDADES CURRICULARES */
+
+/* ========================================= */
+/* CAIXAS DAS UNIDADES CURRICULARES (UCs) */
+/* ========================================= */
 
 .caixa-uc {
+
+    /* Cria uma borda de 1 pixel */
     border: 1px solid rgba(13, 110, 253, 0.4);
-    /* Borda azul suave */
 
+    /* Define um fundo branco com transparência */
     background: rgba(255, 255, 255, 0.7);
-    /* Fundo branco semitransparente */
 
+    /* Arredonda os cantos da caixa */
     border-radius: 12px;
-    /* Cantos arredondados */
 
+    /* Espaçamento interno entre a borda e o conteúdo */
     padding: 12px;
-    /* Espaçamento interno */
 
+    /* Espaçamento inferior entre uma caixa e outra */
     margin-bottom: 12px;
-    /* Espaço entre uma caixa e outra */
 
+    /* Cria uma sombra suave ao redor da caixa */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    /* Sombra suave */
 
+    /* Faz qualquer mudança ocorrer de forma suave durante 0.3 segundos */
     transition: all 0.3s ease;
-    /* Suaviza o efeito de hover */
 }
 
-/* ============================= */
+
+/* ========================================= */
 /* TÍTULO DAS UCs */
-/* ============================= */
+/* ========================================= */
 
 .caixa-uc h5 {
+
+    /* Define o tamanho da fonte do título */
     font-size: 15px;
-    /* Tamanho do título */
 
+    /* Espaço abaixo do título */
     margin-bottom: 6px;
-    /* Espaço entre o título e o texto */
 
+    /* Define a espessura da fonte (seminegrito) */
     font-weight: 600;
-    /* Seminegrito */
 }
 
-/* ============================= */
+
+/* ========================================= */
 /* TEXTO DAS UCs */
-/* ============================= */
+/* ========================================= */
 
 .caixa-uc p {
-    font-size: 12.5px;
-    /* Tamanho do texto */
 
+    /* Tamanho da fonte do parágrafo */
+    font-size: 15px;
+
+    /* Remove todas as margens padrão do navegador */
     margin: 0;
-    /* Remove margens padrão */
 
+    /* Define o espaçamento entre as linhas */
     line-height: 1.4;
-    /* Espaçamento entre linhas */
 }
 
-/* ============================= */
+
+/* ========================================= */
 /* EFEITO AO PASSAR O MOUSE */
-/* ============================= */
+/* ========================================= */
 
 .caixa-uc:hover {
+
+    /* Move a caixa 3 pixels para cima */
     transform: translateY(-3px);
-    /* Move levemente a caixa para cima */
 
+    /* Deixa a sombra mais forte para dar sensação de profundidade */
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-    /* Intensifica a sombra */
 
+    /* Altera a cor da borda para azul */
     border-color: #0d6efd;
-    /* Destaca a borda em azul */
 }
 
-/* ============================= */
+
+/* ========================================= */
 /* IMAGEM FINAL DA PÁGINA */
-/* ============================= */
+/* ========================================= */
 
 .img-full {
+
+    /* Faz o container ocupar toda a largura disponível */
     width: 100%;
-    /* Ocupa toda a largura disponível do container */
 
+    /* Espaço acima da imagem */
     margin-top: 70px;
-    /* Espaço entre o conteúdo e a imagem */
 
+    /* Centraliza o conteúdo horizontalmente */
     text-align: center;
-    /* Centraliza a imagem horizontalmente */
 }
+
+
+/* Configuração da imagem */
 
 .img-full img {
-    width: 100%;
+
     /* Faz a imagem ocupar toda a largura do container */
+    width: 100%;
 
+    /* Limita a largura máxima da imagem */
     max-width: 1110px;
-    /* Limita a largura máxima para acompanhar o conteúdo */
 
+    /* Mantém a proporção da imagem automaticamente */
     height: auto;
-    /* Mantém a proporção da imagem */
 
+    /* Remove pequenos espaços criados por imagens inline */
     display: block;
-    /* Remove espaços extras abaixo da imagem */
 
-    margin: 0 auto;
     /* Centraliza a imagem */
+    margin: 0 auto;
 }
- /* ============================= */
-/* CARDS DO DEV BLOG */
-/* ============================= */
+
+
+/* ========================================= */
+/* CARDS DO DEVBLOG */
+/* ========================================= */
 
 .grid-cards {
+
+    /* Utiliza CSS Grid para organizar os cards */
     display: grid;
+
+    /* Cria 4 colunas com larguras iguais */
     grid-template-columns: repeat(4, 1fr);
+
+    /* Espaçamento entre os cards */
     gap: 15px;
+
+    /* Margem superior */
     margin-top: 20px;
+
+    /* Margem inferior */
     margin-bottom: 20px;
 }
 
+
+/* Card individual */
+
 .card-blog {
+
+    /* Borda azul clara */
     border: 1px solid rgba(13, 110, 253, 0.4);
+
+    /* Fundo branco transparente */
     background: rgba(255, 255, 255, 0.7);
+
+    /* Cantos arredondados */
     border-radius: 12px;
+
+    /* Esconde qualquer conteúdo que ultrapasse o card */
     overflow: hidden;
+
+    /* Sombra suave */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* Suaviza todas as animações */
     transition: all 0.3s ease;
+
+    /* Centraliza o texto */
     text-align: center;
 }
 
+
+/* Efeito ao passar o mouse */
+
 .card-blog:hover {
+
+    /* Move o card levemente para cima */
     transform: translateY(-3px);
+
+    /* Aumenta a sombra */
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+
+    /* Destaca a borda */
     border-color: #0d6efd;
 }
 
+
+/* Imagem do card */
+
 .card-blog img {
+
+    /* Largura total */
     width: 100%;
+
+    /* Altura fixa */
     height: 140px;
+
+    /* Ajusta a imagem sem distorcê-la */
     object-fit: cover;
 }
 
+
+/* Título do card */
+
 .card-blog h5 {
+
+    /* Tamanho da fonte */
     font-size: 14px;
+
+    /* Margem superior e inferior */
     margin: 10px 0;
+
+    /* Seminegrito */
     font-weight: 600;
 }
- /* ============================= */
+
+
+/* ========================================= */
 /* CARTAZ DE NOTÍCIAS */
-/* ============================= */
+/* ========================================= */
 
 .news-banner {
+
+    /* Borda azul clara */
     border: 1px solid rgba(13, 110, 253, 0.4);
+
+    /* Fundo branco transparente */
     background: rgba(255, 255, 255, 0.7);
+
+    /* Cantos arredondados */
     border-radius: 12px;
+
+    /* Espaçamento interno */
     padding: 20px;
+
+    /* Sombra */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* Espaço acima */
     margin-top: 10px;
+
+    /* Suaviza os efeitos */
     transition: all 0.3s ease;
 }
 
+
+/* Hover do banner */
+
 .news-banner:hover {
+
+    /* Destaca a borda */
     border-color: #0d6efd;
+
+    /* Aumenta a sombra */
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
+
+
+/* Esconde todos os slides inicialmente */
 
 .news-slide {
     display: none;
 }
 
+
+/* Apenas o slide ativo será exibido */
+
 .news-slide.active {
     display: block;
 }
 
+
+/* Título da notícia */
+
 .news-slide h4 {
+
+    /* Remove margem superior e mantém inferior */
     margin: 0 0 5px 0;
+
+    /* Tamanho da fonte */
     font-size: 16px;
+
+    /* Seminegrito */
     font-weight: 600;
 }
 
+
+/* Texto da notícia */
+
 .news-slide p {
+
+    /* Remove margens */
     margin: 0;
+
+    /* Tamanho da fonte */
     font-size: 13px;
+
+    /* Espaçamento entre linhas */
     line-height: 1.4;
 }
 
+
+/* ========================================= */
+/* CARROSSEL PRINCIPAL */
+/* ========================================= */
+
 #bannerPrincipal {
-    height: 60vh;
+
+    /* Define a altura como 60% da altura da janela do navegador */
+    height: 80vh;
 }
+
+
+/* Faz o conteúdo interno ocupar toda a altura do banner */
 
 #bannerPrincipal .carousel-inner,
 #bannerPrincipal .carousel-item {
+
+    /* Altura igual ao banner */
     height: 100%;
 }
 
+
+/* Configuração das imagens do carrossel */
+
 #bannerPrincipal img {
+
+    /* Ocupa toda a altura disponível */
     height: 100%;
+
+    /* Ocupa toda a largura disponível */
     width: 100%;
+
+    /* Ajusta a imagem preenchendo o espaço sem deformar */
     object-fit: cover;
 }
