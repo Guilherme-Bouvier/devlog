@@ -1,0 +1,201 @@
+body {
+    background-color: #f0f8ff;
+    /* Define a cor de fundo da página (azul bem claro) */
+
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte padrão do site */
+}
+
+/* CAIXAS DAS UNIDADES CURRICULARES */
+
+.caixa-uc {
+    border: 1px solid rgba(13, 110, 253, 0.4);
+    /* Borda azul suave */
+
+    background: rgba(255, 255, 255, 0.7);
+    /* Fundo branco semitransparente */
+
+    border-radius: 12px;
+    /* Cantos arredondados */
+
+    padding: 12px;
+    /* Espaçamento interno */
+
+    margin-bottom: 12px;
+    /* Espaço entre uma caixa e outra */
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* Sombra suave */
+
+    transition: all 0.3s ease;
+    /* Suaviza o efeito de hover */
+}
+
+/* ============================= */
+/* TÍTULO DAS UCs */
+/* ============================= */
+
+.caixa-uc h5 {
+    font-size: 15px;
+    /* Tamanho do título */
+
+    margin-bottom: 6px;
+    /* Espaço entre o título e o texto */
+
+    font-weight: 600;
+    /* Seminegrito */
+}
+
+/* ============================= */
+/* TEXTO DAS UCs */
+/* ============================= */
+
+.caixa-uc p {
+    font-size: 12.5px;
+    /* Tamanho do texto */
+
+    margin: 0;
+    /* Remove margens padrão */
+
+    line-height: 1.4;
+    /* Espaçamento entre linhas */
+}
+
+/* ============================= */
+/* EFEITO AO PASSAR O MOUSE */
+/* ============================= */
+
+.caixa-uc:hover {
+    transform: translateY(-3px);
+    /* Move levemente a caixa para cima */
+
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    /* Intensifica a sombra */
+
+    border-color: #0d6efd;
+    /* Destaca a borda em azul */
+}
+
+/* ============================= */
+/* IMAGEM FINAL DA PÁGINA */
+/* ============================= */
+
+.img-full {
+    width: 100%;
+    /* Ocupa toda a largura disponível do container */
+
+    margin-top: 70px;
+    /* Espaço entre o conteúdo e a imagem */
+
+    text-align: center;
+    /* Centraliza a imagem horizontalmente */
+}
+
+.img-full img {
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do container */
+
+    max-width: 1110px;
+    /* Limita a largura máxima para acompanhar o conteúdo */
+
+    height: auto;
+    /* Mantém a proporção da imagem */
+
+    display: block;
+    /* Remove espaços extras abaixo da imagem */
+
+    margin: 0 auto;
+    /* Centraliza a imagem */
+}
+ /* ============================= */
+/* CARDS DO DEV BLOG */
+/* ============================= */
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-blog {
+    border: 1px solid rgba(13, 110, 253, 0.4);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.card-blog:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    border-color: #0d6efd;
+}
+
+.card-blog img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card-blog h5 {
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+ /* ============================= */
+/* CARTAZ DE NOTÍCIAS */
+/* ============================= */
+
+.news-banner {
+    border: 1px solid rgba(13, 110, 253, 0.4);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.news-banner:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.news-slide {
+    display: none;
+}
+
+.news-slide.active {
+    display: block;
+}
+
+.news-slide h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.news-slide p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+#bannerPrincipal {
+    height: 60vh;
+}
+
+#bannerPrincipal .carousel-inner,
+#bannerPrincipal .carousel-item {
+    height: 100%;
+}
+
+#bannerPrincipal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
