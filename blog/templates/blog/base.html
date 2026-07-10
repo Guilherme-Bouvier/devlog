@@ -32,7 +32,7 @@
 
     <div class="container">
         <a class="navbar-brand fw-bold" href="{% url 'home' %}">
-            🚀 DevBlog
+             DevBlog
         </a>
         <button class="navbar-toggler"
                 type="button"
@@ -47,6 +47,13 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
+            
+            <form class="d-flex" method="GET" action="{% url 'home' %}">
+
+                <input class="form-control me-2" type="search" name="q" placeholder="Pesquisar artigos..." aria-label="Pesquisar">
+
+                <button class="btn btn-success" type="submit">Buscar</button>
+            </form>
 
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
@@ -110,7 +117,7 @@
         <div class="row align-items-center">
             <div class="col-md-12 text-center">
                 <small class="text-white-50">
-                    © 2026 DevBlog Desenvolvido com Django + Bootstrap 5
+                    © 2026 DevBlog Guilherme Bouvier
                 </small>
             </div>
         </div>
