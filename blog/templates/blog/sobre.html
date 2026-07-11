@@ -28,18 +28,138 @@
             <div>
             {# Container interno do texto sobre o projeto #}
         
-                <p class="text-dark mb-0" style="text-align: justify;">
-                {# Parágrafo principal detalhado do projeto #}
+            <p class="text-dark mb-0" style="text-align: justify;">
 
-                    O <strong>DEV BLOG</strong> é o projeto final desenvolvido na <strong>UC5 – Planejar e Desenvolver Websites Utilizando o Framework Django</strong>, consolidando os conhecimentos adquiridos ao longo da trilha de aprendizado em programação e desenvolvimento de software.<br><br>
-
-                    O projeto consiste em uma plataforma web dinâmica voltada para a publicação e gerenciamento de conteúdos relacionados à tecnologia, programação e desenvolvimento de software. Desenvolvido com o framework <strong>Django</strong>, o sistema aplica conceitos de arquitetura web, modelagem de banco de dados, autenticação de usuários, gerenciamento de conteúdo e organização de aplicações seguindo as boas práticas do desenvolvimento moderno.<br><br>
-
-                    Durante sua construção, foram utilizados recursos como o sistema de rotas, templates, formulários, autenticação e autorização de usuários, painel administrativo, persistência de dados com banco de dados relacional e interface responsiva, proporcionando uma experiência intuitiva tanto para administradores quanto para visitantes.<br><br>
-
-                    Além de demonstrar domínio técnico sobre o ecossistema Django, o <strong>DEV BLOG</strong> representa a integração prática dos conhecimentos desenvolvidos ao longo de toda a formação, desde os fundamentos da lógica de programação e desenvolvimento de algoritmos em Python até a criação de aplicações desktop e aplicações web responsivas. Dessa forma, o projeto evidencia a capacidade de planejar, desenvolver e implementar uma aplicação web completa, escalável, organizada e alinhada às práticas adotadas no mercado de desenvolvimento de software.
-
-                </p>
+                <strong>Sobre o Projeto</strong><br><br>
+                
+                O <strong>DEV BLOG</strong> é uma aplicação web desenvolvida como projeto final da formação em desenvolvimento de software, tendo como finalidade reunir e aplicar, em uma única solução, os conhecimentos adquiridos durante o processo de aprendizagem em programação e desenvolvimento de aplicações web.
+                
+                O projeto consiste em uma plataforma digital voltada para publicação, organização e apresentação de conteúdos relacionados à tecnologia, programação e desenvolvimento de software. A proposta surgiu da necessidade de criar um ambiente onde informações pudessem ser estruturadas de forma clara, permitindo que usuários navegassem por artigos, categorias e conteúdos organizados de maneira simples e intuitiva.
+                
+                Mais do que um site de publicação de textos, o DEV BLOG foi planejado como uma aplicação completa, envolvendo diferentes etapas do desenvolvimento de software, desde a definição da estrutura do sistema, criação das entidades do banco de dados, desenvolvimento das interfaces, implementação das regras de negócio até a preparação para disponibilização em ambiente de produção.
+                
+                Durante sua construção, o projeto passou por diversas etapas de evolução, iniciando com uma estrutura básica de páginas e conteúdos estáticos e evoluindo para uma aplicação dinâmica, com gerenciamento de informações, organização por categorias, sistema de busca, paginação de artigos, carregamento de imagens, integração com banco de dados e disponibilização online.
+                
+                O resultado é uma aplicação web funcional, organizada e preparada para receber novos recursos futuramente, demonstrando a importância de uma arquitetura bem estruturada e de um desenvolvimento baseado em boas práticas.
+                
+                
+                <br><br>
+                
+                <strong>Objetivo</strong><br><br>
+                
+                O principal objetivo do DEV BLOG é criar uma plataforma de conteúdo tecnológico capaz de apresentar informações de maneira organizada, proporcionando uma experiência agradável tanto para visitantes quanto para administradores responsáveis pelo gerenciamento dos artigos.
+                
+                A aplicação foi desenvolvida com o propósito de demonstrar, na prática, como uma ideia pode ser transformada em um sistema funcional, passando por todas as etapas necessárias para o desenvolvimento de uma aplicação real.
+                
+                Entre os objetivos principais do projeto estão:
+                
+                <br><br>
+                
+                • Criar uma plataforma para publicação e visualização de artigos;
+                
+                <br>
+                
+                • Organizar conteúdos através de categorias, facilitando a navegação dos usuários;
+                
+                <br>
+                
+                • Implementar mecanismos que permitam encontrar conteúdos específicos através da pesquisa;
+                
+                <br>
+                
+                • Desenvolver uma interface responsiva e adaptável para diferentes dispositivos;
+                
+                <br>
+                
+                • Estruturar um sistema de gerenciamento de informações utilizando banco de dados;
+                
+                <br>
+                
+                • Aplicar conceitos de organização, segurança e manutenção de código;
+                
+                <br>
+                
+                • Desenvolver uma aplicação preparada para evolução e inclusão de novas funcionalidades.
+                
+                
+                <br><br>
+                
+                Além do desenvolvimento técnico, o projeto também possui como objetivo demonstrar a capacidade de planejamento e construção de uma aplicação completa, considerando aspectos importantes como experiência do usuário, organização das informações, desempenho e facilidade de manutenção.
+                
+                
+                <br><br>
+                
+                <strong>Arquitetura</strong><br><br>
+                
+                A arquitetura do DEV BLOG foi desenvolvida seguindo o padrão MVT (Model, View, Template), modelo amplamente utilizado pelo framework Django para organização de aplicações web.
+                
+                Essa estrutura permite separar responsabilidades dentro do sistema, tornando o código mais organizado, compreensível e fácil de evoluir.
+                
+                A camada de <strong>Model</strong> é responsável pela representação dos dados da aplicação, definindo as estruturas utilizadas para armazenar informações como artigos, categorias e demais registros necessários para o funcionamento do sistema.
+                
+                A camada de <strong>View</strong> concentra as regras de negócio da aplicação, sendo responsável por receber as solicitações dos usuários, realizar consultas, aplicar filtros, organizar informações e encaminhar os dados necessários para apresentação.
+                
+                A camada de <strong>Template</strong> representa a interface visual do sistema, responsável por exibir os conteúdos ao usuário através de páginas dinâmicas, utilizando uma estrutura reutilizável e organizada.
+                
+                Além dessa divisão principal, o projeto possui uma organização modular, permitindo que funcionalidades sejam desenvolvidas e mantidas de forma independente. Essa abordagem facilita futuras melhorias, correções e expansão da aplicação.
+                
+                A aplicação também conta com recursos como gerenciamento de arquivos de mídia, controle de dados persistidos, comunicação através de API, autenticação, organização de rotas e preparação para execução em ambiente de produção.
+                
+                
+                <br><br>
+                
+                <strong>Desenvolvimento</strong><br><br>
+                
+                O desenvolvimento do DEV BLOG envolveu diversas etapas, começando pelo planejamento da estrutura da aplicação e definição das funcionalidades principais.
+                
+                Inicialmente foi criada a base do projeto, incluindo configuração do ambiente, organização das aplicações internas e definição dos modelos responsáveis pelos dados.
+                
+                Posteriormente foram desenvolvidas as páginas responsáveis pela apresentação das informações, criando uma interface organizada para exibição dos conteúdos, navegação entre categorias e acesso aos detalhes dos artigos.
+                
+                Durante a evolução do projeto foram implementadas funcionalidades importantes para melhorar a experiência do usuário, como:
+                
+                <br><br>
+                
+                • Exibição dinâmica de artigos;
+                
+                <br>
+                
+                • Organização dos conteúdos por categorias;
+                
+                <br>
+                
+                • Sistema de pesquisa;
+                
+                <br>
+                
+                • Paginação dos resultados;
+                
+                <br>
+                
+                • Carregamento e gerenciamento de imagens;
+                
+                <br>
+                
+                • Área administrativa para gerenciamento das informações;
+                
+                <br>
+                
+                • Estrutura de API para disponibilização de dados;
+                
+                <br>
+                
+                • Preparação para publicação em ambiente de produção.
+                
+                
+                <br><br>
+                
+                O desenvolvimento também envolveu a preocupação com organização do código, separação de responsabilidades e utilização de práticas que tornam a aplicação mais segura e sustentável.
+                
+                O processo de construção do DEV BLOG representa a aplicação prática de uma jornada de aprendizado, reunindo conhecimentos de programação, desenvolvimento web, banco de dados e arquitetura de software em uma única solução.
+                
+                Dessa forma, o projeto demonstra não apenas a criação de uma página web, mas a construção de um sistema completo, planejado e desenvolvido seguindo uma estrutura próxima à utilizada em aplicações profissionais.
+                
+                </p>   
 
             </div>
 
@@ -103,13 +223,19 @@
     <!-- BOTÃO GITHUB -->
 <div class="text-center my-4">
 
+    <p class="text-muted mb-3">
+            Confira o código-fonte e a evolução do projeto no GitHub.
+    </p>
+    
     <a href="https://github.com/Guilherme-Bouvier"
-       target="_blank"
-       class="btn btn-dark btn-lg px-5 shadow-sm">
-
-        <i class="bi bi-github"></i> Acessar meu GitHub
-    </a>
-
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-dark btn-lg px-5 shadow-sm">
+    
+        <i class="bi bi-github"></i>
+            Acessar meu GitHub
+        </a>
+    
 </div>
 
     <!-- IMAGEM FINAL DA PÁGINA -->
